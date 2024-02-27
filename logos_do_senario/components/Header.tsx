@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-function Header(){
+
+function Header({cor, titulo}){
+
     return(
-    <View style={styles.container}>
+    <View style={{...styles.container, backgroundColor: cor}}>
         <StatusBar style="light" />
         <Image style={styles.logo} source={require('./assets/Logo.png')} />
-        <Text style={styles.texto}>Cadastre-se</Text>
+        <Text style={styles.texto}>{titulo}</Text>
     </View>
     )
 }
@@ -14,7 +16,6 @@ function Header(){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#FF0000",
         alignItems: "center",
     },
     logo: {
