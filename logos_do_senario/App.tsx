@@ -1,11 +1,9 @@
-import { View } from "react-native";
-import Header from "./components/Header";
-import RecSenha from "./screens/RecSenha";
+import Cadastro from './Screens/Cadastro'
 
-function App(){
-  return(
-    <View>
-      <RecSenha />
-    </View>
+const App = () => {
+  return (
+    <Cadastro />
   )
 }
+
+export default App
