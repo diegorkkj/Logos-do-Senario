@@ -1,46 +1,32 @@
-import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet} from "react-native";
 import { StatusBar } from 'expo-status-bar';
-import { Entypo, Foundation} from '@expo/vector-icons';
 
+type Props = {
+    children: any;
+    color: string;
+};
 
-const PatrimonioBar = () => {
-
-    const Lista = () => {
-        alert('Lista ainda está em desenvolvimento!');
-    }
-
-    const Pesquisa = () => {
-        alert('Pesquisa ainda está em desenvolvimento!');
-    }
-
-    return(
-        <View style={styles.container}>
-            <StatusBar style="light" backgroundColor="#333" />
-            <View style={styles.displaytop}>
-                <Foundation name="list" size={30} color="#595959" onPress={Lista} />
-                <TouchableOpacity>
-                    <Entypo name="magnifying-glass" size={30} color="#595959" onPress={Pesquisa}/>
-                </TouchableOpacity>
-            </View>
+export default function PatriBar({children, color}: Props){
+    const styles = StyleSheet.create({
+        container: {
+            height: 70,
+            width: "100%",
+            marginTop: 20,
+            borderBottomColor: "#F5F5F5",
+            padding: 4,
+            justifyContent: "center",
+        },
+        separar: {
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            margin: 10,      
+        }
+    });
+    return (
+        <View style={[styles.container, {backgroundColor: color}]}>
+            <StatusBar backgroundColor="black"/>
+            <View style={styles.separar}>{children}</View>
         </View>
-    );
+);
 }
-
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        height: 120,
-
-    },
-    displaytop: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        width: 360,
-        padding: 10,
-    },
-});
-
-export default PatrimonioBar;

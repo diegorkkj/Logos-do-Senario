@@ -1,20 +1,22 @@
 import React from "react";
-import { AntDesign,FontAwesome5, FontAwesome6,} from '@expo/vector-icons';
-import { View, StyleSheet, ScrollView } from "react-native";
-import PatrimonioBar from "../components/PatrimonioBar";
+import { View, StyleSheet, ScrollView, TouchableOpacity, Text} from "react-native";
+import PatriBar from "../components/PatrimonioBar";
 import Itens from "../components/Itens";
-
+import Footbar from "../components/Footer";
+import { Feather, Octicons, AntDesign } from '@expo/vector-icons';
 
 const Patrimonio = () => {
-
-    const Adicionar = () => {
-        alert('Adicionar ainda está em desenvolvimento!');
-    }
-
     return(
         <View style={styles.container}>
-            <PatrimonioBar />
-
+            <PatriBar color="white">
+                <TouchableOpacity>
+                    <Octicons name="three-bars" size={24} color="black" />
+                </TouchableOpacity>
+                    <Text style={styles.text}>Lista</Text>
+                <TouchableOpacity>
+                    <Feather name="search" size={24} color="black" />
+                </TouchableOpacity>
+            </PatriBar>
             <ScrollView>
                 <Itens id={956389} item={'CADEIRA SENAI'} />
                 <Itens id={956389} item={'CADEIRA SENAI'} />
@@ -36,38 +38,18 @@ const Patrimonio = () => {
                 <Itens id={956389} item={'CADEIRA SENAI'} />
                 <Itens id={956389} item={'CADEIRA SENAI'} />
                 <Itens id={956389} item={'CADEIRA SENAI'} />
-
             </ScrollView>
-
-                <View style={styles.addButtonContainer}>
-                    <AntDesign name="pluscircle" size={50} color="red" onPress={Adicionar} />
-                </View>
-
-                <View style={styles.display}>
-                    <FontAwesome6 name="camera-rotate" size={30} color="#ffffff" />
-                    <FontAwesome5 name="list-ol" size={30} color="#ffffff" />
-
-                </View>
-
+            <View style={styles.addButtonContainer}>
+                <AntDesign name="pluscircle" size={50} color="red"  />
+            </View>
+            <Footbar color="red" ColorIcon="white" margem={0} />
         </View>
     );
 }
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-    },
-    display: {
-        width: "100%",
-        height: 60,
-        bottom: 0,
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#ff0000",
-        gap: 20,
-
     },
     addButtonContainer: {
         position: "absolute",
@@ -77,6 +59,10 @@ const styles = StyleSheet.create({
         marginBottom: 50,
         height: 60,
     },
+    text: {
+        color: "#000",
+        fontSize: 16,
+    }, 
 });
 
 export default Patrimonio;
