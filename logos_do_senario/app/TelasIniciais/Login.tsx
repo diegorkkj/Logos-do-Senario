@@ -11,7 +11,7 @@ import { useColor } from '../../temas/temas';
 const Login = () => {
     const cores = useColor();
     return (
-        <View style={[styles.container, { backgroundColor: cores.bgSecondary }]}>
+        <View style={[styles.container, { backgroundColor: cores.bgQuaternary }]}>
         <Status title="Login" />
         <View style={[styles.cadastro, { backgroundColor: cores.bgPrimary }]}>
         <Text style={[styles.texto, { color: cores.textColorPrimary }]}>Faça Login para Acessar o Sistema!</Text>
