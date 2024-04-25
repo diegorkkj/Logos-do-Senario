@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 export default function layout(){
     const cores = useColor()
     return(
-
+        
         <Tabs screenOptions={{
             tabBarShowLabel: false,
             tabBarStyle: { backgroundColor: cores.bgPrimary },
@@ -22,13 +22,13 @@ export default function layout(){
                 headerStyle: { backgroundColor: cores.bgSecondary },
             }}
         />
-                <Tabs.Screen name="DrawerNav"
+
+        <Tabs.Screen name="DrawerNav"
             options={{
                 headerShown: false,
                 tabBarStyle:{
                     backgroundColor: '#FF0000'},
                 tabBarIcon: ({color, size}) => (
-                    <MaterialCommunityIcons name="camera-flip" size={size} color={color}/>
                     <MaterialIcons name="format-list-bulleted" size={size} color={color} />
                 ),
                 tabBarInactiveTintColor: '#fff',

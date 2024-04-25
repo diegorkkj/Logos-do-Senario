@@ -11,6 +11,7 @@ interface LinkBtnProps extends LinkProps{
 export default function LinkBtn({title, ...props}: LinkBtnProps){
     const cores = useColor();
 
+
     const styles = StyleSheet.create({
         button: {
             backgroundColor: cores.bgButton,

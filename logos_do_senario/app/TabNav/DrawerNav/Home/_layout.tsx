@@ -1,6 +1,6 @@
+import { DrawerToggleButton } from "@react-navigation/drawer";
 import { Link, Stack } from "expo-router";
 import { useColor } from "../../../../temas/temas";
-import { DrawerToggleButton } from "@react-navigation/drawer";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
@@ -12,11 +12,12 @@ export default function layout() {
             <Stack.Screen
                 name="Lista"
                 options={{
-                    headerLeft: () => <DrawerToggleButton />,
-                    headerSearchBarOptions: { placeholder: "Pesquisar" },
-                    headerStyle: { backgroundColor: cores.bgPatrimonio },
+                    headerLeft: () => <DrawerToggleButton tintColor= {cores.textColorPrimaryVariant} />,
+                    headerSearchBarOptions: { placeholder: "Pesquisar", headerIconColor: cores.textColorPrimaryVariant},
+                    headerStyle: { backgroundColor: cores.bglistaPrimary },
                     headerTitleAlign: 'center',
-                    headerTintColor: cores.textColorSecondary,
+                    headerTintColor: cores.textColorPrimaryVariant,
+                    
                 }}
             />
 

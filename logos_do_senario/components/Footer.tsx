@@ -8,6 +8,7 @@ type Props = {
   ColorIcon: string;
   margem: number;
 };
+
 export default function Footbar({ color, ColorIcon, margem }: Props){
     const styles = StyleSheet.create({
         display: {
@@ -30,3 +31,6 @@ export default function Footbar({ color, ColorIcon, margem }: Props){
     </View>
   );
 };
+
+
+

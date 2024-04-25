@@ -3,6 +3,7 @@ import Status from '@components/StatusBar';
 import Inputs from '@components/Input';
 import { useColor } from '../../temas/temas';
 import LinkBtn from '@components/Linkbtn';
+
 const RecupSenha = () => {
     const cores = useColor();
 
@@ -17,6 +18,7 @@ const RecupSenha = () => {
         </View>
     );
 };
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -35,5 +37,7 @@ const styles = StyleSheet.create({
         width: '70%',
         margin: 20,
     },
+
 });
+
 export default RecupSenha;

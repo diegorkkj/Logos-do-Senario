@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet} from 'react-native';
 import Status from '@components/StatusBar';
 import { ActivityIndicator } from 'react-native';
 import { useColor } from '../../temas/temas';
@@ -7,17 +7,16 @@ import { useColor } from '../../temas/temas';
 const Load = () => {
   const cores = useColor();
 
-  console.log(cores);
-
   return (
-    <View style={[styles.container, { backgroundColor: cores.bgSecondary }]}>
+    <View style={[styles.container, {backgroundColor: cores.bgSecondary}]}>
       <Status title={''} />
-      <ActivityIndicator size={60} color="#ffff" style={styles.circle} />
+      <ActivityIndicator size={60} color="#ffff" style={styles.circle}  />
 
     </View>
-
+    
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -25,7 +24,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   circle: {
-    marginTop: -60,
+    marginTop: -60,  
   },
 });
+
 export default Load;

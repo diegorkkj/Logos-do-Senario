@@ -1,4 +1,6 @@
 import { useColorScheme } from 'react-native'
+
+
 interface cores {
     /* Backgrounds */
     bgPrimary: string
@@ -9,6 +11,8 @@ interface cores {
     bginfo: string
     textColorPrimary: string
     textColorSecondary: string
+    bglistaPrimary: string
+
     /* Input */
     bgPrimaryVariant: string
     textColorPrimaryVariant: string
@@ -20,26 +24,27 @@ interface cores {
 
 
 const light: cores = {
-        /* Backgrounds */
-        bgPrimary: '#FFFFFF',
-        bgSecondary: '#FF0000',
-        bgTertiary: '#011E83',
-        bgQuaternary: '#101010',
-        bgPatrimonio: '#FF0000',
-    
-        /* Texto */
-        bginfo: '#011E83',
-        textColorPrimary: '#101010',
-        textColorSecondary: '#FFFFFF',
+    /* Backgrounds */
+    bgPrimary: '#FFFFFF',
+    bgSecondary: '#FF0000',
+    bgTertiary: '#011E83',
+    bgQuaternary: '#101010',
+    bgPatrimonio: '#FF0000',
+    bglistaPrimary: '#ffffff',
 
-        /* Input */
-        bgPrimaryVariant: '#F5F5F5',
-        textColorPrimaryVariant: '#595959',
-        bgHover: '#F39200',
-        
+    /* Texto */
+    bginfo: '#011E83',
+    textColorPrimary: '#101010',
+    textColorSecondary: '#FFFFFF',
+
+    /* Input */
+    bgPrimaryVariant: '#F5F5F5',
+    textColorPrimaryVariant: '#595959',
+    bgHover: '#F39200',
+
     /* Button */
     bgButton: '#101010'
-
+    
 }
 
 const dark: cores = {
@@ -49,6 +54,8 @@ const dark: cores = {
     bgTertiary: '#240707',
     bgQuaternary: '#240707',
     bgPatrimonio: '#FF0000',
+    bglistaPrimary: '#240707',
+    
 
     /* Texto */
     bginfo: '#ffffff',
