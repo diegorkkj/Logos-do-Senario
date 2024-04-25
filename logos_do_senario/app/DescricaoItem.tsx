@@ -1,21 +1,13 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
-import PatriBar from "../components/PatrimonioBar";
-import {AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
-import Footbar from "../components/Footer";
+import { View, StyleSheet, Text} from "react-native";
+import {MaterialCommunityIcons } from '@expo/vector-icons';
+import { Link } from "expo-router";
+
+
 const Descricao = () => {
     return(
         <View style={styles.container}>
-            <PatriBar color="red">
-                <TouchableOpacity>
-                    <AntDesign name="arrowleft" size={24} color="#ffff" />
-                </TouchableOpacity>
-                    <Text style={styles.text}>Descrição de Itens</Text>
-                <TouchableOpacity>
-                    <AntDesign name="pluscircleo" size={24} color="#ffff" />
-                </TouchableOpacity>
-            </PatriBar>
-            <View style={styles.corpo}>
+                        <View style={styles.corpo}>
                 <Text style={styles.titulo}>N° do Inventario:</Text>
                 <Text style={styles.item}> 957689 </Text>
                 <Text style={styles.titulo}>Descrição:</Text>
@@ -28,10 +20,11 @@ const Descricao = () => {
                 <Text style={styles.item}> 05/03/2024 </Text>
             </View>
             <View style={styles.addButtonContainer}>
-                <MaterialCommunityIcons name="pencil-circle" size={50} color="red" />
+                <Link href="/Editar" asChild>
+                    <MaterialCommunityIcons name="pencil-circle" size={60} color="red" />
+                </Link>
             </View>
-            <Footbar color="white" ColorIcon="#595959" margem={1} />
-        </View>
+            </View>
     );
 };
 const styles = StyleSheet.create({

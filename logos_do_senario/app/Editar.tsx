@@ -1,17 +1,18 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text} from "react-native";
-import PatriBar from "../components/PatrimonioBar";
+import PatriBar from "@components/PatrimonioBar";
 import {AntDesign, MaterialIcons } from '@expo/vector-icons';
-import Footbar from "../components/Footer";
-import InputinventoryInput from "../components/Inputitens";
-
+import Footbar from "@components/Footer";
+import InputinventoryInput from "@components/Inputitens";
+import { Link } from "expo-router";
 const Editar = () => {
     return(
         <View style={styles.container}>
-
-            <PatriBar color="red">
+                        <PatriBar color="red">
                 <TouchableOpacity>
-                    <AntDesign name="arrowleft" size={25} color="#ffff" />
+                    <Link href="/DescricaoIten" asChild>
+                        <AntDesign name="arrowleft" size={25} color="#ffff" />
+                    </Link>
                 </TouchableOpacity>
                     <Text style={styles.text}>Editar</Text>
                 <TouchableOpacity>
@@ -20,25 +21,17 @@ const Editar = () => {
             </PatriBar>
 
             <View style={styles.inputContainer}>
-
             <InputinventoryInput label="N° Inventario" placeholder="957689"/>
-
-            <InputinventoryInput label="Descrição" placeholder="CADEIRA GIRATÓRIA"/>
-
-            <InputinventoryInput label="Local" placeholder="SALA C13"/>
-
-            <InputinventoryInput label="Responsável" placeholder="CARLOS"/>
-
-            <InputinventoryInput label="Data de registro" placeholder="05/03/2024"/>
-
+                <InputinventoryInput label="Descrição" placeholder="CADEIRA GIRATÓRIA"/>
+                <InputinventoryInput label="Local" placeholder="SALA C13"/>
+                <InputinventoryInput label="Responsável" placeholder="CARLOS"/>
+                <InputinventoryInput label="Data de registro" placeholder="05/03/2024"/>
             </View>
 
             <Footbar color="white" ColorIcon="#595959" margem={1} />
-
-        </View>
+            </View>
     );
 };
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -50,8 +43,6 @@ const styles = StyleSheet.create({
     inputContainer: {
         flex: 1,
         marginTop: 50,
-
     },
 });
-
 export default Editar;
