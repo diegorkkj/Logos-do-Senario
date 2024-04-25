@@ -1,11 +1,13 @@
 import React from "react";
 import { View, StyleSheet, ScrollView, TouchableOpacity, Text} from "react-native";
+import { Feather, Octicons, AntDesign } from '@expo/vector-icons';
+import { Link } from "expo-router";
 import PatriBar from "../components/PatrimonioBar";
 import Itens from "../components/Itens";
 import Footbar from "../components/Footer";
-import { Feather, Octicons, AntDesign } from '@expo/vector-icons';
 
 const Patrimonio = () => {
+
     return(
         <View style={styles.container}>
             <PatriBar color="white">
@@ -40,9 +42,14 @@ const Patrimonio = () => {
                 <Itens id={956389} item={'CADEIRA SENAI'} />
             </ScrollView>
             <View style={styles.addButtonContainer}>
-                <AntDesign name="pluscircle" size={50} color="red"  />
+                <Link href="/Additens" asChild>
+                    <AntDesign name="pluscircle" size={50} color="red"  />
+                </Link>
             </View>
+
             <Footbar color="red" ColorIcon="white" margem={0} />
+
+
         </View>
     );
 }

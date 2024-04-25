@@ -1,5 +1,5 @@
 import { View, StyleSheet} from 'react-native';
-import Status from '../components/StatusBar';
+import Status from '../../components/StatusBar';
 import { ActivityIndicator } from 'react-native';
 
 const Load = () => {

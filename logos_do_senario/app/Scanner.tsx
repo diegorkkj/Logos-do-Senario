@@ -1,7 +1,8 @@
 import React from "react";
 import { View, StyleSheet} from "react-native";
 import {MaterialIcons} from '@expo/vector-icons';
-
+import PatriBar from "../components/PatrimonioBar";
+import Footbar from "../components/Footer";
 
 
 const Scanner = () => {
