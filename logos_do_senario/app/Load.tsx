@@ -1,6 +1,5 @@
 import { View, StyleSheet} from 'react-native';
 import Status from '../components/StatusBar';
-import { FontAwesome } from '@expo/vector-icons';
 import { ActivityIndicator } from 'react-native';
 
 const Load = () => {
